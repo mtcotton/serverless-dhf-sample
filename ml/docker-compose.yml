@@ -1,0 +1,26 @@
+version: '3.6'
+services:
+  serverless-dhf-marklogic:
+    image: store/marklogicdb/marklogic-server:10.0-6.1-dev-centos
+    container_name: serverless-dhf-marklogic
+    domainname: .
+    environment:
+      - MARKLOGIC_INIT=true
+      - MARKLOGIC_ADMIN_USERNAME=admin
+      - MARKLOGIC_ADMIN_PASSWORD=admin
+      - TZ=America/Chicago
+    ports:
+      - 5423:5432
+      - 7997-8013:7997-8013
+    networks:
+      - external_net
+      - internal_net
+    volumes:
+      - 'marklogic:/var/opt/MarkLogic'
+      - './data:/mnt/data'
+volumes:
+  marklogic:
+networks:
+  external_net: {}
+  internal_net:
+    internal: true
