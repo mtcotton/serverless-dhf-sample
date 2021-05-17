@@ -1,0 +1,16 @@
+{
+  "name" : "harmonizeEmployees",
+  "description" : "",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "stepId" : "mapEmployees-mapping",
+      "name" : "mapEmployees",
+      "stepDefinitionType" : "MAPPING"
+    }
+  }
+}

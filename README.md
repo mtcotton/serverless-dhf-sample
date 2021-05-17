@@ -38,9 +38,11 @@
     ```
     plugins {
         id 'net.saliman.properties' version '1.4.6'
-        id 'com.marklogic.ml-data-hub' version '5.2.2'
+        id 'com.marklogic.ml-data-hub' version '5.4.2'
     }
     ```
 4. `./gradlew hubInit`
 5. Create `gradle-local.properties` (see `gradle-local.properties.sample`)
 6. `./gradlew mlDeploy`
+7. Download Hub Central CE, login with flow-developer
+8. 
